@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Musab Farah</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230e0e0e'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-size='28' font-weight='600' fill='%23ededed'>MF</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --fg: #ededed;
+    --muted: #8a8a8a;
+    --accent: #e8e8e8;
+    --line: #222;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 120px 32px 120px;
+  }
+  h1 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .tag {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  section { margin-bottom: 16px; }
+  h2 {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  p { margin-bottom: 14px; color: #d0d0d0; }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    gap: 16px;
+  }
+  .row-left { display: flex; align-items: center; gap: 14px; flex: 1; }
+  .logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #1a1a1a;
+    border: 1px solid #222;
+    padding: 5px;
+  }
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform-origin: center;
+  }
+  .logo-microsoft { transform: scale(0.95); }
+  .logo-nvidia { transform: scale(1.05); }
+  .logo-autodesk { transform: scale(1.12); }
+  .logo-google { transform: scale(1.08); }
+  .logo-scotiabank { transform: scale(1.08); }
+  .row-text { flex: 1; min-width: 0; }
+  .row:last-child { border-bottom: none; }
+  .role { color: var(--fg); font-weight: 400; }
+  .co { color: var(--muted); font-size: 0.9rem; }
+  .team { color: #b8b8b8; font-size: 0.8rem; margin-top: 2px; }
+  .work {
+    color: #d0d0d0;
+    font-size: 0.84rem;
+    margin-top: 5px;
+    line-height: 1.45;
+  }
+  .year {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted);
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    transition: border-color 0.15s;
+  }
+  a:hover { border-color: var(--accent); }
+  .links { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+  .links a {
+    border: none;
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .links a:hover { color: var(--fg); background: #1a1a1a; }
+  .now-list { list-style: none; padding: 0; }
+  .now-list li {
+    color: #d0d0d0;
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .now-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Musab Farah</h1>
+  <div class="tag">Passionate about cybersecurity.</div>
+
+  <section>
+    <h2>Socials</h2>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/musabafarah/" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+      <a href="https://x.com/musabcodes" aria-label="X (Twitter)"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.11 8.126L22.75 22h-6.55l-5.13-6.712L5.09 22H1.83l7.61-8.7L1.25 2h6.72l4.64 6.121L18.244 2zm-1.15 18h1.81L7 3.897H5.06L17.094 20z"/></svg></a>
+      <a href="https://www.tiktok.com/@musabcodes" aria-label="TikTok"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.5a8.16 8.16 0 004.77 1.52V6.58a4.8 4.8 0 01-1.84-.42z"/></svg></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=musabafarah@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Now</h2>
+    <ul class="now-list">
+      <li>reading <a href="https://www.goodreads.com/book/show/40961427-1984" style="text-decoration: underline; text-underline-offset: 2px; border-bottom: none;">1984</a></li>
+      <li>playing resident evil 2 remake</li>
+      <li>making content on tiktok <a href="https://www.tiktok.com/@musabcodes">@musabcodes</a></li>
+      <li>wrapping up my internship at autodesk</li>
+      <li>trying to find housing in the bay</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="row">
+      <div class="row-left">
+        <div class="logo"><img class="logo-microsoft" src="logos/microsoft.svg" alt="Microsoft"></div>
+        <div class="row-text"><div class="role">Security Researcher Intern</div><div class="co">Microsoft</div><div class="team">Microsoft Threat Intelligence Centre (MSTIC)</div><div class="work"><strong>What I worked on:</strong> coming soon...</div></div>
+      </div>
+      <div class="year">Aug – Nov 2026</div>
+    </div>
+    <div class="row">
+      <div class="row-left">
+        <div class="logo"><img class="logo-nvidia" src="logos/nvidia.svg" alt="NVIDIA"></div>
+        <div class="row-text"><div class="role">Security Engineering Intern</div><div class="co">NVIDIA</div><div class="team">VulnOps Integrations & Engineering</div><div class="work"><strong>What I worked on:</strong> coming soon...</div></div>
+      </div>
+      <div class="year">May – Jul 2026</div>
+    </div>
+    <div class="row">
+      <div class="row-left">
+        <div class="logo"><img class="logo-autodesk" src="logos/autodesk.svg" alt="Autodesk"></div>
+        <div class="row-text"><div class="role">Threat Intelligence Engineer Intern</div><div class="co">Autodesk</div><div class="team">Threat Analytics Group</div><div class="work"><strong>What I worked on:</strong> Built agents to automate analyst workflows and conducted threat research to create intelligence products.</div></div>
+      </div>
+      <div class="year">Jan – May 2026</div>
+    </div>
+    <div class="row">
+      <div class="row-left">
+        <div class="logo"><img class="logo-google" src="logos/google.svg" alt="Google"></div>
+        <div class="row-text"><div class="role">Security Consultant Intern</div><div class="co">Google Mandiant</div><div class="team">Cyber Defense</div><div class="work"><strong>What I worked on:</strong> Engineered a RAG pipeline for report generation and built a detection coverage prioritization tool to surface client detection gaps.</div></div>
+      </div>
+      <div class="year">May – Aug 2025</div>
+    </div>
+    <div class="row">
+      <div class="row-left">
+        <div class="logo"><img class="logo-scotiabank" src="logos/scotiabank.svg" alt="Scotiabank"></div>
+        <div class="row-text"><div class="role">Security Investigator Intern</div><div class="co">Scotiabank</div><div class="team">Digital Forensics Services</div><div class="work"><strong>What I worked on:</strong> Automated parts of security investigations and supported digital forensics and incident response workflows.</div></div>
+      </div>
+      <div class="year">Sep – Dec 2024</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership & Community</h2>
+    <div class="row">
+      <div><div class="role">Events Chair</div><div class="co">ColorStack @ Carleton University</div></div>
+      <div class="year">Sep 2025 – Apr 2026</div>
+    </div>
+    <div class="row">
+      <div><div class="role">Region I East Canada Zone Planning Chair</div><div class="co">National Society of Black Engineers</div></div>
+      <div class="year">Sep 2024 – May 2025</div>
+    </div>
+    <div class="row">
+      <div><div class="role">Lead Coding Instructor</div><div class="co">Black Boys Code</div></div>
+      <div class="year">Jan 2023 – Dec 2024</div>
+    </div>
+  </section>
+
+  <footer>Musab Farah © 2026</footer>
+</main>
+</body>
+</html>
